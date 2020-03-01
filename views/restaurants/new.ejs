@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Add New Restaurant</title>
+  <!-- Google Icon Fonts used by Materialize -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!-- Materialize CSS Framework -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <link rel="stylesheet" href="stylesheets/style.css" />
+  <!-- JavaScript for Materialize -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+</head>
+<body>
+<div class="container">
+    <form action = '/restaurant' method='post'>
+  <div class="form-row">
+    <h3>Enter New Restaurant</h3>
+  <form class="add-new">
+    <div class="row">
+        <div class="input-field col s6">
+        <input placeholder="Placeholder" id="first_name" type="text" class="validate">
+        <label for="first_name">First Name</label>
+        </div>
+        <div class="input-field col s6">
+        <input id="last_name" type="text" class="validate">
+        <label for="last_name">Last Name</label>
+        </div>
+    </div>
+    <div class="row">
+      <div class="input-field col s12">
+        <input id="password" type="password" class="validate">
+        <label for="password">Password</label>
+      </div>
+    </div>
+    <div class="row">
+      <div class="input-field col s12">
+        <input id="email" type="email" class="validate">
+        <label for="email">Email</label>
+      </div>
+    </div>
+  </form>
+</div>
+</body>
+</html>

@@ -13,11 +13,12 @@ require('./config/passport');
 
 
 
-var methodOverride = require('method-override');
-// require('dotenv').config();
-
 var indexRouter = require('./routes/index');
+const restaurantsRouter = require('./routes/restaurants');
 var usersRouter = require('./routes/users');
+
+
+var methodOverride = require('method-override');
 
 var app = express();
 
@@ -44,7 +45,9 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(methodOverride('_method'));
 
 app.use('/', indexRouter);
+app.use('/restaurants', restaurantsRouter);
 app.use('/', usersRouter);
+
 
 
 
