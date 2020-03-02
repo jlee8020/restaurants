@@ -8,6 +8,8 @@ const passport = require('passport');
 
 require('dotenv').config();
 
+var app = express();
+
 require('./config/database');
 require('./config/passport');
 
@@ -20,7 +22,6 @@ var usersRouter = require('./routes/users');
 
 var methodOverride = require('method-override');
 
-var app = express();
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));

@@ -11,7 +11,7 @@ function index(req, res) {
         if (err) {
             console.log(err);
         } else {
-        res.render('restaurants/index', {title: 'Restaurant List', restaurants});
+        res.render('restaurants/index', {title: 'Restaurant List', restaurants, user: req.user});
         }
     });
 }

@@ -7,6 +7,7 @@ var userSchema = new mongoose.Schema({
     city: String,
     avatar: String,
     googleId: String,
+    //student fact Schema facts:[(factSchema)]
 }, {
     timestamps: true
 });
