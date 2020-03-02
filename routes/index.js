@@ -32,7 +32,7 @@ router.get('/oauth2callback', passport.authenticate(
 
 router.get('/logout', function(req, res) {
   req.logout();
-  res.redirect('/users');
+  res.redirect('/restaurants');
 });
 
 module.exports = router;
