@@ -3,42 +3,49 @@
 <head>
   <title>Add New Restaurant</title>
   <!-- Google Icon Fonts used by Materialize -->
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!-- <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"> -->
   <!-- Materialize CSS Framework -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-  <link rel="stylesheet" href="stylesheets/style.css" />
-  <!-- JavaScript for Materialize -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <!-- <link rel="stylesheet" href="stylesheets/style.css" /> -->
 </head>
 <body>
-<div class="container">
-    <form action = '/restaurant' method='post'>
-  <div class="form-row">
-    <h3>Enter New Restaurant</h3>
-  <form class="add-new">
-    <div class="row">
-        <div class="input-field col s6">
-        <input placeholder="Placeholder" id="first_name" type="text" class="validate">
-        <label for="first_name">First Name</label>
-        </div>
-        <div class="input-field col s6">
-        <input id="last_name" type="text" class="validate">
-        <label for="last_name">Last Name</label>
-        </div>
+    <div class="container">
+        <h3>New Restaurant</h3>
+            <form id= 'new-form' action = '/restaurants' method='POST'>
+                <div class="form-row">
+                <label for="rest-name">Restaurant Name</label>
+                 <input placeholder="Restaurant Name" id="rest_name" type="text" name='restaurant'>
+                </div>
+                    <div class="form-row">
+                    <label name ='address'>Address:</label>
+                    </div>
+                    <div class="form-row">
+                    <label for="address-one">Address Line 1: </label>
+                    <input placeholder="Address Line 1" id="adddress-line-one" type="text" name='address-line-one'>
+                    </div>
+                    <div class="form-row">
+                    <label for="address-one">Address Line 2: </label>
+                    <input placeholder="Address Line 2" id="adddress-line-two" type="text" name='address-line-two'>
+                    </div>
+                    <div class="form-row">    
+                    <label for="city">City: </label>
+                    <input placeholder="City" id="city" type="text" name='city'>
+                    </div>
+                    <div class="form-row">    
+                    <label for="state">State: </label>
+                    <input placeholder="State" id="state" type="text" name='state'>
+                    </div>
+                    <div class="form-row">    
+                    <label for="zip">Zip Code: </label>
+                    <input placeholder="Zip Code" id="zip" type="text" name='zip'>
+                    </div><br><br>
+                    <div>
+                        <button type="submit" class="btn btn-warning" value="Add Restaurant">Add Restaurant</button>
+                    </div>
+                </div>
+            </form>
     </div>
-    <div class="row">
-      <div class="input-field col s12">
-        <input id="password" type="password" class="validate">
-        <label for="password">Password</label>
-      </div>
-    </div>
-    <div class="row">
-      <div class="input-field col s12">
-        <input id="email" type="email" class="validate">
-        <label for="email">Email</label>
-      </div>
-    </div>
-  </form>
-</div>
+
 </body>
 </html>
