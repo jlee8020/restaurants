@@ -18,7 +18,7 @@ require('./config/passport');
 var indexRouter = require('./routes/index');
 const restaurantsRouter = require('./routes/restaurants');
 var usersRouter = require('./routes/users');
-
+const addsRouter = require('./routes/adds');
 
 var methodOverride = require('method-override');
 
@@ -48,6 +48,7 @@ app.use(methodOverride('_method'));
 app.use('/', indexRouter);
 app.use('/restaurants', restaurantsRouter);
 app.use('/', usersRouter);
+app.use('/', addsRouter);
 
 
 

@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-const addressSchema = new mongoose.Schema({
+const addSchema = new mongoose.Schema({
         street: {type: String},
         city:{type: String},
         state:{type: String},
@@ -8,11 +8,13 @@ const addressSchema = new mongoose.Schema({
 });
 const restaurantSchema = new mongoose.Schema({
     name: {type: String,required: true},
-    addresses: [addressSchema],
+    addresses: [addSchema],
     experiences: {},
     // experiences: [experienceSchema],
     users: {},
 
+},{
+ timestamps: true
 })
 
 module.exports = mongoose.model('Restaurant', restaurantSchema)

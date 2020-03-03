@@ -25,10 +25,11 @@ function newRestaurant(req, res) {
     console.log(req.body);
     restaurant.save(function(err) {
         if (err) {
+            console.log(err)
             return res.render('restaurants/new');}
-        console.log('Added restaurant to database: ' + restaurant);
+            console.log('Added restaurant to database: ' + restaurant);
         // res.redirect('/restaurants/index');
-        res.redirect(`/restaurants/${restaurant._id}`);
+            res.redirect('/restaurants');
 
     });
 }

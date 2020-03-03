@@ -39,19 +39,26 @@
         <a href="http://materializecss.com/getting-started.html" id="download-button" class="btn-large waves-effect waves-light orange">Get Started</a>
       </div>
       <br><br>
-      <table class="table" id='rest-list'>
+      <form id="new-form" action="/restaurants/new" method="">
+      <table class="table">
         <thead>
           <tr>
-            <th scope="col">Restaurant Name</th>
-            <th scope="col">Address</th>
-            <th scope="col">Hey!</th>
+            <th scope="col">Restaurant Name:</th>
+            <th scope="col">Street:</th>
+            <th scope="col">City:</th>
+            <th scope="col">State:</th>
+            <th scope="col">Zip Code:</th>
+            <th scope="col">Details</th>
           </tr>
         </thead>
         <tbody>
           <% restaurants.forEach(function(r){ %>
             <tr>
-              <td><%= r.restaurant %></td>
-              <td><%= r.address %></td>
+              <td><%= r.name %></td>
+              <td><%= r.street %></td>
+              <td><%= r.city %></td>
+              <td><%= r.state %></td>
+              <td><%= r.zip %></td>
               <td><a href="/restaurants/<%=r._id %>">More</a></td>
           </tr>
           <% }); %>
@@ -62,6 +69,7 @@
   <div>
     <button type="submit" class="btn btn-warning" value="Add Restaurant">Add Restaurant</button>
 </div>
+</form>
 
   <div class="">
     <div class="section">
