@@ -21,6 +21,11 @@ body {
   padding-bottom: 50px;
   
 }
+.update{
+  display: flex;
+  max-width: 100;
+  text-align: center;
+}
 .show-detail{
   display: flex;
   flex-direction: column;
@@ -28,7 +33,7 @@ body {
   max-width: 900px;
   margin: 20px auto 0 auto;
   padding: 30px;
-  background-color: purple; */
+  background-color: purple; 
 }
 .rest-detail{
   display: flex;

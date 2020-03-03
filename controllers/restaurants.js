@@ -6,6 +6,8 @@ module.exports = {
     create,
     show,
     delete: deleteOne,
+    showUpdate,
+    update
 }
 
 function index(req, res) {
@@ -51,4 +53,37 @@ function show(req, res) {
         }
     })
     res.redirect('/restaurants')
+}
+
+function showUpdate(req,res){
+    Restaurant.findById(req.params.id, function (err, restaurant){
+        if (err){
+            console.log(err);
+
+        }else{
+            res.render('restaurants/update', {title: 'Edit Restaurant', restaurant})
+        }
+    });
+}
+
+function update(req, res) {
+    console.log(req.body);
+
+    Restaurant.findByIdAndUpdate(req.params.id,{
+        
+            name: req.body.name,
+            street: req.body.street,
+            city: req.body.city,
+            state: req.body.state,
+            zip: req.body.zip
+            
+        },
+        {new: true},
+        function(err, response) {
+            if (err) {
+                console.log(err);
+            } else {
+                res.redirect('/restaurants')
+            }
+        })
 }
