@@ -50,5 +50,5 @@ function show(req, res) {
         console.log('deleting: ' + restaurant);
         }
     })
-    res.redirect('/restaurant')
+    res.redirect('/restaurants')
 }
