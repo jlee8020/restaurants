@@ -4,6 +4,7 @@ module.exports = {
     index,
     new: newRestaurant,
     create,
+    show,
 }
 
 function index(req, res) {
@@ -17,16 +18,15 @@ function index(req, res) {
 }
 
 function newRestaurant(req, res) {
-    res.render('restaurants/new', { title: 'Add New Restaurant' });
+    res.render('restaurants/new');
   }
 
   function create(req, res) {
     var restaurant = new Restaurant(req.body);
     console.log(req.body);
     restaurant.save(function(err) {
-        if (err) {
-            console.log(err)
-            return res.render('restaurants/new');}
+        if (err) 
+            return res.render('restaurants/new');
             console.log('Added restaurant to database: ' + restaurant);
         // res.redirect('/restaurants/index');
             res.redirect('/restaurants');
@@ -34,3 +34,8 @@ function newRestaurant(req, res) {
     });
 }
 // ${restaurant._id}
+function show(req, res) {
+    Restaurant.findById(req.params.id, function(err, restaurant) {
+      res.render('restaurants/show', { title: 'Restaurant Detail', restaurant, adds });
+    });
+  }

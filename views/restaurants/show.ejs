@@ -1,0 +1,43 @@
+<section id="show-page">
+    <div>Restaurant Name: </div>
+    <div><%= restaurant.name %></div>
+  </section>
+
+  <br><br><h2>Address:</h2>
+<form id="add-address-form" method="POST"
+    action="/restaurants/<%= restaurant._id %>/adds">
+    <label>Street:</label>
+    <input type="text" name="street"> 
+    <label>City:</label>
+    <input type="text" name="city"> 
+    <label>State:</label>
+    <input type="text" name="state"> 
+    <label>Zip Code:</label>
+    <input type="text" name="zip"> 
+    <div>
+        <button type="submit" class="btn btn-warning" value="Add Address">Add</button>
+    </div>  
+</form>
+<% if(restaurant.adds.length){%>
+    <table>
+        <thead>
+          <tr>
+            <th>Street</th>
+            <th>City</th>
+            <th>State</th>
+            <th>Zip Code</th>
+          </tr>
+        </thead>
+        <tbody>
+            <% restaurant.adds.forEach(function(a) { %>
+              <tr>
+                <td><%= a.street%></td>
+                <td><%= a.city%></td>
+                <td><%= a.state%></td>
+                <td><%= a.zip%></td>
+              </tr>
+            <% }); %>
+          </tbody>
+        </table>
+      <% } %>
+    

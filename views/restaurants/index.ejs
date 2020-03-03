@@ -27,27 +27,11 @@
       </div>
     </div>
   </nav>
-  
-  <div class="section no-pad-bot" id="index-banner">
-    <div class="">
-      <br><br>
-      <h1 class="header center orange-text">Starter Template</h1>
-      <div class="row center">
-        <h5 class="header col s12 light">A modern responsive front-end framework based on Material Design</h5>
-      </div>
-      <div class="row center">
-        <a href="http://materializecss.com/getting-started.html" id="download-button" class="btn-large waves-effect waves-light orange">Get Started</a>
-      </div>
-      <br><br>
-      <form id="new-form" action="/restaurants/new" method="">
+      <form id="new-form" action="/restaurants/new" method="GET">
       <table class="table">
         <thead>
           <tr>
             <th scope="col">Restaurant Name:</th>
-            <th scope="col">Street:</th>
-            <th scope="col">City:</th>
-            <th scope="col">State:</th>
-            <th scope="col">Zip Code:</th>
             <th scope="col">Details</th>
           </tr>
         </thead>
@@ -55,22 +39,17 @@
           <% restaurants.forEach(function(r){ %>
             <tr>
               <td><%= r.name %></td>
-              <td><%= r.street %></td>
-              <td><%= r.city %></td>
-              <td><%= r.state %></td>
-              <td><%= r.zip %></td>
-              <td><a href="/restaurants/<%=r._id %>">More</a></td>
+              <td><a href="/restaurants/<%=r._id %>">Details Here</a></td>
           </tr>
           <% }); %>
         </tbody>
       </table>
+              <div>
+                <button type="submit" class="btn btn-warning" value="Add Restaurant">Add Restaurant</button>
+              </div>
     </div>
   </div>
-  <div>
-    <button type="submit" class="btn btn-warning" value="Add Restaurant">Add Restaurant</button>
-</div>
-</form>
-
+</form> 
   <div class="">
     <div class="section">
 
