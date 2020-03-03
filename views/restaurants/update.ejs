@@ -14,6 +14,7 @@
   <div class="show-detail-2">
     <div class="rest-detail">
     <div><b><%= restaurant.name %></b></div>
+    <div><%= restaurant.category %></div>
     <div><%= restaurant.street %></div>
     <div><%= restaurant.city %>, <%= restaurant.state %>   <%= restaurant.zip %></div>
     </div>
@@ -25,6 +26,11 @@
             <label for="rest-name">Restaurant Name</label>
              <input placeholder="Restaurant Name" id="rest_name" type="text" name="name">
             </div>
+            <div class="form-row">
+              <label for="cat">Category:</label>
+               <input placeholder="Ethic, Fast Food, Fast Casual, Casual Dining, Premium Casual, Family Style, Fine Dining" 
+               id="category" type="text" name="category">
+          </div>
                 <div class="form-row">
                 <label>Address:</label>
                 </div>
