@@ -38,7 +38,7 @@ function newRestaurant(req, res) {
 // ${restaurant._id}
 function show(req, res) {
     Restaurant.findById(req.params.id, function(err, restaurant) {
-      res.render('restaurants/show', { title: 'Restaurant Detail', restaurant, adds });
+      res.render('restaurants/show', { title: 'Restaurant Detail', restaurant});
     });
   }
 
