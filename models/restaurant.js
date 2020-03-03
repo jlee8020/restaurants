@@ -1,18 +1,12 @@
 const mongoose = require('mongoose');
 
-const addressSchema = new mongoose.Schema ({
-    adds: {
-        street : String, 
-        city: String, 
-        state : String, 
-        zip: Number
-    }
-})
-
 
 const restaurantSchema = new mongoose.Schema({
     name: {type: String,},
-    adds: [addressSchema],  
+    street:{type: String}, 
+    city: {type: String}, 
+    state:{type: String}, 
+    zip:  {type: Number},  
 },{
  timestamps: true
 })

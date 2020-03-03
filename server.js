@@ -18,7 +18,6 @@ require('./config/passport');
 var indexRouter = require('./routes/index');
 const restaurantsRouter = require('./routes/restaurants');
 var usersRouter = require('./routes/users');
-const addsRouter = require('./routes')
 
 var methodOverride = require('method-override');
 

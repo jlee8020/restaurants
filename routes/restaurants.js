@@ -6,6 +6,7 @@ router.get('/', restaurantsCtrl.index);
 router.get('/new', restaurantsCtrl.new);
 router.get('/:id', restaurantsCtrl.show);
 router.post('/', restaurantsCtrl.create);
+router.delete('/:id',restaurantsCtrl.delete);
 
 
 module.exports = router;

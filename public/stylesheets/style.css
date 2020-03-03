@@ -9,6 +9,10 @@
   /* height & width now includes border & padding */
   box-sizing: border-box;
 }
+  #delete{
+  size: 1px;
+
+}
 body {
   
   margin: 0;

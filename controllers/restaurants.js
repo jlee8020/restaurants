@@ -5,6 +5,7 @@ module.exports = {
     new: newRestaurant,
     create,
     show,
+    delete: deleteOne,
 }
 
 function index(req, res) {
@@ -32,6 +33,7 @@ function newRestaurant(req, res) {
             res.redirect('/restaurants');
 
     });
+
 }
 // ${restaurant._id}
 function show(req, res) {
@@ -39,3 +41,14 @@ function show(req, res) {
       res.render('restaurants/show', { title: 'Restaurant Detail', restaurant, adds });
     });
   }
+
+  function deleteOne(req, res) {
+    Restaurant.findByIdAndDelete(req.params.id, function(err, restaurant){
+        if (err) {
+            console.log(err);
+        } else {
+        console.log('deleting: ' + restaurant);
+        }
+    })
+    res.redirect('/restaurant')
+}
