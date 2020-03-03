@@ -16,9 +16,12 @@
 body {
   display: flex;
   margin: 0;
-  background-color: #BBB;
+  background-color:purple;
   font-family: Helvetica, sans-serif;
   padding-bottom: 50px;
+  width: 1500px;
+  flex-direction: column;
+
   
 }
 .update{
@@ -51,9 +54,9 @@ body {
    display: flex;
    flex-direction: column;
    text-align: center;
-   /* justify-content: center; */
-  max-width: 750px;
-  margin: 20px auto 0 auto;
+   justify-content: center;
+  max-width: 900px;
+  margin: auto;
   padding: 30px;
   background-color: #FFF;
 
