@@ -10,6 +10,8 @@
 </head>
 <body>
     <div class="container">
+    <table class="table">
+        <thead>
         <h3>New Restaurant</h3>
             <form id="new-form" action ="/restaurants" method="POST">
                 <div class="form-row">
@@ -20,13 +22,12 @@
                     <label for="category">Category:</label>
                      <input placeholder="Ethic, Fast Food, Fast Casual, Casual Dining, Premium Casual, Family Style, Fine Dining" id="category" type="text" name="category">
                     </div>
+                    <div class="form-row">
                     <label for="cuisine">Cuisine Type:</label>
                      <input placeholder="Italian, BBQ, Seafood, Mediterranian" id="cuisine" type="text" name="cuisine">
                     </div>
                     <div class="form-row">
-                    <label>Address:</label>
-                    </div>
-                    <div class="form-row">
+                        <label>Address:</label>
                     <label for="street">Street: </label>
                     <input placeholder="123 Main Street Suite 1" type="text" name="street">
                     </div>
@@ -47,7 +48,7 @@
                     </div>
                 </div>
             </form>
-    </div>
-
+        </thead>
+        </table>
 </body>
 </html>
