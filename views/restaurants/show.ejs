@@ -36,7 +36,7 @@
       <form id="add-experience" method="POST"
         action="/restaurants/<%= restaurant._id %>/experiences">
         <label>Experience:</label>
-        <textarea name="content" type="text" required pattern="/^#\S+$/"></textarea>
+        <textarea name="content" type="text" placeholder="#startwithahashtag!" required pattern="(#\S-1{1,15}\b)"></textarea>
         <label>Rating:</label>
         <select name="rating">
           <option value="Excellent">Excellent</option>
