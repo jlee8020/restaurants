@@ -35,7 +35,7 @@
       <form id="add-experience" method="POST"
         action="/restaurants/<%= restaurant._id %>/experiences">
         <label>Experience:</label>
-        <textarea name="content"></textarea>
+        <textarea name="content" type="text" required pattern="/^#\S+$/"></textarea>
         <label>Rating:</label>
         <select name="rating">
           <option value="Excellent">Excellent</option>
@@ -60,6 +60,8 @@
               <tr>
                 <td><%= e.content %></td>
                 <td><%= e.rating %></td>
+                <form action="/experiences/<%=e._id %>?_method=DELETE" method="POST">
+                  <td><button id="delete" type="submit" class="btn btn-warning">x</button></td>
               </tr>
             <% }); %>
           </tbody>
