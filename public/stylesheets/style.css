@@ -9,6 +9,16 @@
   /* height & width now includes border & padding */
   box-sizing: border-box;
 }
+
+h1.technique-five {
+	width: 350px; height: 75px;
+	background: url("https://i.imgur.com/9X8gYfC.jpg");
+	}
+	h1.technique-five span {
+		display: none;
+	}
+
+
   #delete{
   size: 1px;
 

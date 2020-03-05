@@ -1,3 +1,4 @@
+
 <html lang="en"><head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0">
@@ -9,22 +10,10 @@
   <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection">
 </head>
 <body>
-  <div class = "show-detail">
-  <nav class="light-blue lighten-1" role="navigation">
-    <div class="nav-wrapper container"><a id="logo-container" href="#" class="brand-logo">Logo</a>
-      <ul class="right hide-on-med-and-down">
-        <li><a href="#">Navbar Link</a></li>
-      </ul>
-
-      <ul id="nav-mobile" class="sidenav">
-        <li><a href="#">Navbar Link</a></li>
-      </ul>
-      <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
-    </div>
-  </nav>
-  <div class="section no-pad-bot" id="index-banner">
-    <div class="container">
-      <br><br>
+    <div class="container-details">
+          <div class="logo">
+          <a href="https://imgur.com/9X8gYfC"><img src="https://i.imgur.com/9X8gYfCl.jpg" title="source: imgur.com" /></a>
+          </div> 
       <h2 class="header center orange-text">Restaurant Details</h2>
       <div class="show-detail-2">
         <div class="rest-detail">
@@ -42,69 +31,50 @@
           <button type="submit" class="btn btn-warning" value="Edit Details">Edit</button>
       </div>
     </form>
-      <br><br>
-
-    </div>
-  </div>
-
-
-  <div class="container">
-    <div class="section">
-
-
-    
-
+      <br><br><h2>Experiences</h2>
+      <form id="add-experience" method="POST"
+        action="/restaurants/<%= restaurant._id %>/experiences">
+        <label>Experience:</label>
+        <textarea name="content"></textarea>
+        <label>Rating:</label>
+        <select name="rating">
+          <option value="Excellent">Excellent</option>
+          <option value="Great">Great</option>
+          <option value="Average">Good</option>
+          <option value="NotGood">Not Good</option>
+          <option value="Yikes" selected>Yikes</option>
+        </select>
+        <input type="submit" value="Add Experience">
+      </form>
+      
+      <% if (restaurant.experiences.length) { %>
+        <table>
+          <thead>
+            <tr>
+              <th>Experiences</th>
+              <th>Rating</th>
+            </tr>
+          </thead>
+          <tbody>
+            <% restaurant.experiences.forEach(function(e) { %>
+              <tr>
+                <td><%= e.content %></td>
+                <td><%= e.rating %></td>
+              </tr>
+            <% }); %>
+          </tbody>
+        </table>
+      <% } else { %>
+        <h5>No Reviews Yet</h5>
+      <% } %>
         <div class="col s12 m4">
-          <div class="icon-block">
-            <h2 class="center light-blue-text"><i class="material-icons">settings</i></h2>
-            <h5 class="center">Easy to work with</h5>
-
-            <p class="light">We have provided detailed documentation as well as specific code examples to help new users get started. We are also always open to feedback and can answer any questions a user may have about Materialize.</p>
-          </div>
-        </div>
       </div>
 
-    </div>
-    <br><br>
-  </div>
-
-  <footer class="page-footer orange">
-    <div class="container">
-      <div class="row">
-        <div class="col l6 s12">
-          <h5 class="white-text">Company Bio</h5>
-          <p class="grey-text text-lighten-4">We are a team of college students working on this project like it's our full time job. Any amount would help support and continue development on this project and is greatly appreciated.</p>
-
-
-        </div>
-        <div class="col l3 s12">
-          <h5 class="white-text">Settings</h5>
-          <ul>
-            <li><a class="white-text" href="#!">Link 1</a></li>
-            <li><a class="white-text" href="#!">Link 2</a></li>
-            <li><a class="white-text" href="#!">Link 3</a></li>
-            <li><a class="white-text" href="#!">Link 4</a></li>
-          </ul>
-        </div>
-        <div class="col l3 s12">
-          <h5 class="white-text">Connect</h5>
-          <ul>
-            <li><a class="white-text" href="#!">Link 1</a></li>
-            <li><a class="white-text" href="#!">Link 2</a></li>
-            <li><a class="white-text" href="#!">Link 3</a></li>
-            <li><a class="white-text" href="#!">Link 4</a></li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </body>
+</div>
+</body>
 </html>
-    <div class="footer-copyright">
-      <div class="container">
-      Made by <a class="orange-text text-lighten-3" href="http://materializecss.com">Materialize</a>
-      </div>
-    </div>
-  </footer>
+
+        
 
 
   <!--  Scripts-->

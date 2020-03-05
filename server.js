@@ -18,6 +18,7 @@ require('./config/passport');
 var indexRouter = require('./routes/index');
 const restaurantsRouter = require('./routes/restaurants');
 var usersRouter = require('./routes/users');
+var experiencesRouter = require('./routes/experiences');
 
 var methodOverride = require('method-override');
 
@@ -32,14 +33,15 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 
 app.use(session({
-        secret: 'IamJan!',
-        resave: false,
-        saveUninitialized: true
+  secret: 'IamJan!',
+  resave: false,
+  saveUninitialized: true
 }));
 
 app.use(passport.initialize());
 app.use(passport.session());
 
+app.use('/', experiencesRouter);
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use(methodOverride('_method'));
