@@ -9,9 +9,10 @@
 - Click here(https://jlee8020.github.io/project-blackjack/) to play the game.
 
 ## Motivation:
-- Austin food scene has transformed into a mecca of experience and exploration especially for food lovers. From one humble heart of a food truck operator to an experienced or well known executive chefs who brings love, flavor and experiences to their dishes. 
+- Austin food scene has transformed into a mecca of experience and exploration especially for food lovers. From one humble heart of a food truck operator to an experienced or well known executive chefs who brings love, flavor and experiences to their dishes. There's no wonder why like many others, I have a long list of restaurants to visit around town! So, creating an app that list all these amazing places to showcase our very own Austin is a no brainer.
 
 ## Developer Ahas:
+Have a back up plan.
 
 
 ## Prototype View:
