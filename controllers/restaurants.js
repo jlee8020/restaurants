@@ -72,6 +72,8 @@ function update(req, res) {
     Restaurant.findByIdAndUpdate(req.params.id,{
         
             name: req.body.name,
+            cuisine: req.body.cuisine,
+            category: req.body.category,
             street: req.body.street,
             city: req.body.city,
             state: req.body.state,
