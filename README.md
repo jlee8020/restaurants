@@ -14,6 +14,10 @@
 ## Developer Ahas:
 Have a back up plan.
 
+## User Story:
+Marie is a fun loving yet uptight tech company CEO who is going to Austin for a 4 day conference. She has never been to Austin and was expecting a bunch of horses and cowboys/cowgirls roaming around town. 
+By some twist of fate she saw and flagged down Sam Grey Horse for local advice. Sam gladly pulled out his phone to show her the list of amazing food places to try in Austin! And so Marie had indulge in guilt and pleasure at Gourdough's public house and also had a quiet dinner at Josephine's as well as Odd Duck. Thanks to Sam Grey Horse and Food Lovers Marie can't wait to visit Austin again!
+
 
 ## Prototype View:
 - Here is my initial drawing of the playing field:
