@@ -13,6 +13,7 @@ const experienceSchema = new mongoose.Schema({
 const restaurantSchema = new mongoose.Schema({
     name: {type: String},
     category: {String},
+    cuisine: {String},
     street:{type: String}, 
     city: {type: String}, 
     state:{type: String}, 
