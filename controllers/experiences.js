@@ -1,7 +1,8 @@
 const Restaurant = require('../models/restaurant');
 
 module.exports = {
-  create
+  create,
+  // deleteOne,
 };
 
 function create(req, res) {
@@ -14,3 +15,13 @@ function create(req, res) {
     });
   });
 }
+// function deleteOne(req, res) {
+//  Restaurant.Experience.findByIdAndDelete(req.params.id, function(err, experience){
+//       if (err) {
+//           console.log(err);
+//       } else {
+//       console.log('deleting: ' + experience);
+//       }
+//   })
+//   res.redirect('/')
+// }

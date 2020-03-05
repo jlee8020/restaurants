@@ -48,6 +48,8 @@ app.use(methodOverride('_method'));
 
 app.use('/', indexRouter);
 app.use('/restaurants', restaurantsRouter);
+app.use('/experiences', experiencesRouter);
+
 app.use('/', usersRouter);
 // app.use('/', addsRouter);
 
