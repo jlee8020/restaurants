@@ -60,6 +60,10 @@ body {
   align-items: center;
 
 }
+.new-form-btn{
+  display: flex;
+  flex-direction: inline;
+}
  .container{
    display: flex;
    flex-direction: column;

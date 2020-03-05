@@ -13,7 +13,7 @@
     <table class="table">
         <thead>
         <h3>New Restaurant</h3>
-            <form id="new-form" action ="/restaurants" method="POST">
+            <form id="new-form" action ="/restaurants" method="GET">
                 <div class="form-row">
                 <label for="rest-name">Restaurant Name</label>
                  <input placeholder="Restaurant Name" id="rest_name" type="text" name="name">
@@ -43,8 +43,15 @@
                     <label for="zip">Zip Code: </label>
                     <input placeholder="Zip Code" id="zip" type="text" name="zip">
                     </div><br><br>
+                    <div class="new-form-btn">
                     <div>
                         <button type="submit" class="btn btn-warning" value="Add Restaurant">Add Restaurant</button>
+                    </div>
+                    <form id="new-form" action ="/restaurants" method="GET">
+                        <div>
+                          <button type="submit" class="btn btn-warning" value="cancel">Cancel</button>
+                        </div>
+                      </form>
                     </div>
                 </div>
             </form>
