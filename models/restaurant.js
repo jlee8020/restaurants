@@ -27,7 +27,7 @@ const restaurantSchema = new mongoose.Schema({
     state:{type: String}, 
     zip:  {type: Number},
     experiences : [experienceSchema],
-    userRecommending: {
+    user: {
       type: mongoose.Schema.Types.ObjectId,
       ref: 'User'
     },

@@ -119,30 +119,56 @@ function showUpdate(req,res){
     });
 }
 
+
 function update(req, res) {
-    console.log(req.body);
+    Restaurant.findById(req.params.id, function(err, restaurant) {
+       
+      // Verify book is "owned" by logged in user
+      if (!restaurant.user.equals(req.user._id)) {
+          return res.redirect('/restaurants')
+    }else{
 
-    Restaurant.findByIdAndUpdate(req.params.id,{
-        
-            name: req.body.name,
-            cuisine: req.body.cuisine,
-            category: req.body.category,
-            street: req.body.street,
-            city: req.body.city,
-            state: req.body.state,
-            zip: req.body.zip
-            
-        },
-        {new: true},
-        function(err, response) {
-            if (err) {
-                console.log(err);
-            } else {
-                res.redirect('/restaurants')
-            }
+        req.body.user = req.user._id
+        // req.body._id = req.params.id
+        Restaurant.findByIdAndUpdate(req.params.id, req.body, {new: true}, function(err, restaurant) {
+
+            res.redirect(`/restaurants/${req.params.id}`)
         })
+
+        // restaurant.save(function (err, saveRestaurant){
+
+        //     if (err){
+        //         console.log(err)
+        //         res.redirect(`/update/${restaurant._id}`)
+        //     } else{
+        //     }
+        // })
+    }
+  })
 }
+//   router.put('/update/:id', restaurantsCtrl.update);
 
+// function update(req, res) {    
+//     if
+//     Restaurant.findByIdAndUpdate(req.params.id, function(err, restaurant) {
 
-
-
+//             name: req.body.name,
+//             cuisine: req.body.cuisine,
+//             category: req.body.category,
+//             street: req.body.street,
+//             city: req.body.city,
+//             state: req.body.state,
+//             zip: req.body.zip
+            
+//         },
+//         {new: true},
+//         function(err, response) {
+//             if (err) {
+//                 console.log(err);
+//             } else {
+//                 res.redirect('/restaurants')
+//             }
+//         })
+// }
+// Student.findByIdAndUpdate(req.params.id, req.body,
+//     {new: true})

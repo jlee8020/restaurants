@@ -37,9 +37,9 @@ router.put('/:id', restaurantsCtrl.update)
 
 
 router.get('/update/:id', restaurantsCtrl.showUpdate);
-router.post('/update/:id', restaurantsCtrl.update);
+router.put('/update/:id', restaurantsCtrl.update);
 router.delete('/:id',restaurantsCtrl.delete);
 router.post('/:id', restaurantsCtrl.addFave)
-
+router.put('/:id', restaurantsCtrl.update)
 
 module.exports = router;
