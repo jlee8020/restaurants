@@ -11,9 +11,9 @@ router.post('/restaurants/:id/experiences', experiencesCtrl.create);
 
 //Handle the edit experience form being submitted 
 //(restrict to user who submitted the experience)
-router.put('/experiences/:id', experiencesCtrl.update)
+router.put('/:id', experiencesCtrl.update)
 
 //Delete an experience (restrict to user who submitted the experience)
-router.delete('/experiences/:id', experiencesCtrl.delete);
+router.delete('/:id/:restaurantid', experiencesCtrl.delete);
 
 module.exports = router;

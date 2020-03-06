@@ -4,7 +4,7 @@ var usersCtrl = require('../controllers/users');
 
 
 //get users
-router.get('/users', usersCtrl.index);
+// router.get('/users', usersCtrl.index);
 
 /* GET users listing. */
 router.get('/', function(req, res, next) {

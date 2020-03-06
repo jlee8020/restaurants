@@ -34,14 +34,21 @@ function newRestaurant(req, res) {
     //added to assign the logged in user's id
     restaurant.user = req.user._id;
     restaurant.save(function(err) {
-        if (err) 
-            return res.render('restaurants/new');
+        if (err) {
+            console.log(err)
+            return res.render('restaurants/new');}
+
+            else{
+
+            
 //need to add custom error here//
             console.log('Added restaurant to database: ' + restaurant);
         // res.redirect('/restaurants/index');
+            // res.direct('/restaurants');
             res.redirect(`/restaurants/${restaurant._id}`);
+            }
 
-    });
+    })
 
 }
 
@@ -86,7 +93,7 @@ function allRestaurants(req, res) {
 // ${restaurant._id}
 function show(req, res) {
     Restaurant.findById(req.params.id, function(err, restaurant) {
-      res.render('restaurants/show', { title: 'Restaurant Detail', restaurant});
+      res.render('restaurants/show', { title: 'Restaurant Detail', restaurant, user: req.user});
     });
   }
 

@@ -18,15 +18,16 @@ function create(req, res) {
     });
   });
 }
+// /:id/:restaurantid
 function deleteNow(req, res) {
-  Restaurant.findOne({'experiences._id': req.params.id}, function(err, restaurant) {
+  Restaurant.findOne({'_id': req.params.restaurantid}, function(err, restaurant) {
     const experienceSubdoc = restaurant.experiences.id(req.params.id);
 
     if (!experienceSubdoc.userId.equals(req.user._id)) return res.redirect(`/restaurants/${restaurant._id}`);
 
     experienceSubdoc.remove();
 
-    experience.save(function(err) {
+    restaurant.save(function(err) {
 
       res.redirect(`/restaurants/${restaurant._id}`);
     });

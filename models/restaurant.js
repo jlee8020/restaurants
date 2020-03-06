@@ -29,12 +29,10 @@ const restaurantSchema = new mongoose.Schema({
     experiences : [experienceSchema],
     userRecommending: {
       type: mongoose.Schema.Types.ObjectId,
-      required: true,
       ref: 'User'
     },
     userFave: {
       type: mongoose.Schema.Types.ObjectId,
-      required: true,
       ref: 'User'
     },
     
