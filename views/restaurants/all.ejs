@@ -1,0 +1,75 @@
+<html lang="en"><head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0">
+    <title>Food Lovers</title>
+    <!-- CSS  -->
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"> -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="stylesheets/style.css" />
+    <!-- JavaScript for Materialize -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  </head>   
+  <body>
+      Newly Added All
+          <div class = "container">
+            <div class="logo">
+              <a href="https://imgur.com/9X8gYfC"><img src="https://i.imgur.com/9X8gYfCl.jpg" title="source: imgur.com" /></a>
+            </div>
+            <ul class=nav-wrapper >
+              <li><a href="/restaurants">All Restaurants</a></li>
+              <li><a href="/restaurants/new">New Restaurant</a></li>
+            </ul>
+    <nav class="light-blue lighten-1" role="navigation">
+      <div class="nav-wrapper container">
+        <div>
+        <ul class="right hide-on-med-and-down">
+          <!-- <li> -->
+            <% if (user) { %>
+                <a href="/logout"><i class="material-icons left"></i>Log Out</a>
+            <% } else { %>
+                <a href="/auth/google"><i class="material-icons left"></i>Login with Google</a>
+            <% } %>
+            <!-- </li> -->
+          </ul>
+        </div>
+      </div>
+    </nav>
+        <form id="new-form" action="/restaurants/new" method="GET">
+        <table class="table">
+          <thead>
+            <tr>
+              <th scope="col">Restaurant Name</th>
+              <th scope="col">Cuisine</th>
+              <th scope="col">Category</th>
+              <th scope="col">Location</th>
+              <th scope="col">Details</th>
+            </tr>
+          </thead>
+          <tbody>
+            <% restaurants.forEach(function(r){ %>
+              <tr>
+                <td><%= r.name %></td>
+                <td><%= r.cuisine %></td>
+                <td><%= r.category %></td> 
+                <td><%= r.street%></td>
+                <td><a href="/restaurants/<%=r._id %>">Details Here</a></td>
+                <form action="/restaurants/<%=r._id %>?_method=DELETE" method="POST">
+                <td><button id="delete" type="submit" class="btn btn-warning">x</button></td>
+                </form>
+            </tr>
+            <% }); %>
+          </tbody>
+        </table>
+                <div>
+                  <button type="submit" class="btn btn-warning" value="Add Restaurant">Add Restaurant</button>
+                </div>
+                
+      </div>
+  
+  </form> 
+  </body>
+  </html>
+  
+    
+  
+          

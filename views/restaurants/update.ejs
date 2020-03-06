@@ -10,6 +10,7 @@
   <!-- <link rel="stylesheet" href="stylesheets/style.css" /> -->
 </head>
 <body>
+  update restaurant
   <div class="update">
   <div class="show-detail-2">
     <div class="rest-detail">
@@ -22,37 +23,11 @@
     <h2 class="header center orange-text">Update Restaurant</h2>
     <div class="update-details">
         <form action="/restaurants/update/<%= restaurant._id %>?_method=PUT" method="POST">
-            <div class="form-row">
-            <label for="rest-name">Restaurant Name</label>
-             <input placeholder="Restaurant Name" id="rest_name" type="text" name="name">
-            </div>
-            <div class="form-row">
-              <label for="cat">Category:</label>
-               <input placeholder="Ethic, Fast Food, Fast Casual, Casual Dining, Premium Casual, Family Style, Fine Dining" 
-               id="category" type="text" name="category">
-                </div>
-                <div class="form-row">
-                <label for="cuisine">Cuisine Type:</label>
-                     <input placeholder="Italian, BBQ, Seafood, Mediterranian" id="cuisine" type="text" name="cuisine">
-                </div>
-                <div class="form-row">
-                  <label>Address:</label>
-                <label for="street">Street: </label>
-                <input placeholder="123 Main Street Suite 1" type="text" name="street">
-                </div>
-                <div class="form-row">    
-                <label for="city">City: </label>
-                <input placeholder="City" id="city" type="text" name="city">
-                </div>
-                <div class="form-row">    
-                <label for="state">State: </label>
-                <input placeholder="State" id="state" type="text" name="state">
-                </div>
-                <div class="form-row">    
-                <label for="zip">Zip Code: </label>
-                <input placeholder="Zip Code" id="zip" type="text" name="zip">
-                </div><br><br>
-        <div>
+            
+          <%- include('_form_fields') %>
+
+        
+        
         <button type="submit" class="btn btn-warning" value="Update Restaurant">Update Restaurant</button>
       </div>
     </form>
@@ -61,3 +36,34 @@
 
 </body>
 </html>
+
+<!-- <div class="form-row">
+  <label for="rest-name">Restaurant Name</label>
+   <input placeholder="Restaurant Name" id="rest_name" type="text" name="name">
+  </div>
+  <div class="form-row">
+    <label for="cat">Category:</label>
+     <input placeholder="Ethic, Fast Food, Fast Casual, Casual Dining, Premium Casual, Family Style, Fine Dining" 
+     id="category" type="text" name="category">
+      </div>
+      <div class="form-row">
+      <label for="cuisine">Cuisine Type:</label>
+           <input placeholder="Italian, BBQ, Seafood, Mediterranian" id="cuisine" type="text" name="cuisine">
+      </div>
+      <div class="form-row">
+        <label>Address:</label>
+      <label for="street">Street: </label>
+      <input placeholder="123 Main Street Suite 1" type="text" name="street">
+      </div>
+      <div class="form-row">    
+      <label for="city">City: </label>
+      <input placeholder="City" id="city" type="text" name="city">
+      </div>
+      <div class="form-row">    
+      <label for="state">State: </label>
+      <input placeholder="State" id="state" type="text" name="state">
+      </div>
+      <div class="form-row">    
+      <label for="zip">Zip Code: </label>
+      <input placeholder="Zip Code" id="zip" type="text" name="zip">
+      </div><br><br> -->

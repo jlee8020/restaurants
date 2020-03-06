@@ -1,0 +1,40 @@
+<!-- create shared between edit and new -->
+<head>
+    <title>Add New Restaurant</title>
+    <!-- Google Icon Fonts used by Materialize -->
+    <!-- <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"> -->
+    <!-- Materialize CSS Framework -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!-- <link rel="stylesheet" href="stylesheets/style.css" /> -->
+  </head>
+  <body>
+<div class="form-row">
+    <div>
+    <label for="rest-name">Restaurant Name</label>
+    <input placeholder="Restaurant Name" type="text" name="name" value="<%=restaurant.name%>">
+    </div>
+    <div>
+    <label for="category">Category:</label>
+    <input placeholder="Ethic, Fast Food, Fast Casual, Casual Dining, Premium Casual, Family Style, Fine Dining" type="text" name="category"<%=restaurant.category%>>
+    </div>
+    <div>
+    <label>Address:</label>
+    <label for="street">Street: </label>
+    <input placeholder="123 Main Street Suite 1" type="text" name="street" value="<%=restaurant.street%>">
+    </div>
+    <div>
+    <label for="city">City: </label>
+    <input placeholder="City" id="city" type="text" name="city" value="<%=restaurant.city%>">
+    <label for="state">State: </label>
+    <input placeholder="State" id="state" type="text" name="state" value="<%=restaurant.state%>">
+    </div>
+    <div>
+    <label for="zip">Zip Code: </label>
+    <input placeholder="Zip Code" id="zip" type="text" name="zip" value="<%=restaurant.zip%>">
+    </div>
+</div>
+</body>
+</html>
+
+

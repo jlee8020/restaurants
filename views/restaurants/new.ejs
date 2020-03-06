@@ -9,53 +9,59 @@
   <!-- <link rel="stylesheet" href="stylesheets/style.css" /> -->
 </head>
 <body>
+    add new restaurant
     <div class="container">
     <table class="table">
         <thead>
         <h3>New Restaurant</h3>
             <form id="new-form" action ="/restaurants" method="POST">
-                <div class="form-row">
-                <label for="rest-name">Restaurant Name</label>
-                 <input placeholder="Restaurant Name" id="rest_name" type="text" name="name">
-                </div>
-                    <div class="form-row">
-                    <label for="category">Category:</label>
-                     <input placeholder="Ethic, Fast Food, Fast Casual, Casual Dining, Premium Casual, Family Style, Fine Dining" id="category" type="text" name="category">
-                    </div>
-                    <div class="form-row">
-                    <label for="cuisine">Cuisine Type:</label>
-                     <input placeholder="Italian, BBQ, Seafood, Mediterranian" id="cuisine" type="text" name="cuisine">
-                    </div>
-                    <div class="form-row">
-                        <label>Address:</label>
-                    <label for="street">Street: </label>
-                    <input placeholder="123 Main Street Suite 1" type="text" name="street">
-                    </div>
-                    <div class="form-row">    
-                    <label for="city">City: </label>
-                    <input placeholder="City" id="city" type="text" name="city">
-                    </div>
-                    <div class="form-row">    
-                    <label for="state">State: </label>
-                    <input placeholder="State" id="state" type="text" name="state">
-                    </div>
-                    <div class="form-row">    
-                    <label for="zip">Zip Code: </label>
-                    <input placeholder="Zip Code" id="zip" type="text" name="zip">
-                    </div><br><br>
+                <%- include('_form_fields') %>
+
                     <div class="new-form-btn">
                     <div>
                         <button type="submit" class="btn btn-warning" value="Add Restaurant">Add Restaurant</button>
                     </div><br>
+                    <a href="/restaurants">Cancel</a>
                 </div>
             </div>
         </form>
-        <form id="new-form" action ="/restaurants" method="GET">
+        <!-- <form id="new-form" action ="/restaurants" method="GET">
             <div>
               <button type="submit" class="btn btn-warning" value="cancel">Cancel</button>
             </div>
-          </form>
+          </form> -->
     </thead>
         </table>
 </body>
 </html>
+
+<!-- put back between body if needed -->
+<!-- <div class="form-row">
+    <label for="rest-name">Restaurant Name</label>
+     <input placeholder="Restaurant Name" id="rest_name" type="text" name="name">
+    </div>
+        <div class="form-row">
+        <label for="category">Category:</label>
+         <input placeholder="Ethic, Fast Food, Fast Casual, Casual Dining, Premium Casual, Family Style, Fine Dining" id="category" type="text" name="category">
+        </div>
+        <div class="form-row">
+        <label for="cuisine">Cuisine Type:</label>
+         <input placeholder="Italian, BBQ, Seafood, Mediterranian" id="cuisine" type="text" name="cuisine">
+        </div>
+        <div class="form-row">
+            <label>Address:</label>
+        <label for="street">Street: </label>
+        <input placeholder="123 Main Street Suite 1" type="text" name="street">
+        </div>
+        <div class="form-row">    
+        <label for="city">City: </label>
+        <input placeholder="City" id="city" type="text" name="city">
+        </div>
+        <div class="form-row">    
+        <label for="state">State: </label>
+        <input placeholder="State" id="state" type="text" name="state">
+        </div>
+        <div class="form-row">    
+        <label for="zip">Zip Code: </label>
+        <input placeholder="Zip Code" id="zip" type="text" name="zip">
+        </div><br><br> -->
