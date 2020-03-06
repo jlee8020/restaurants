@@ -6,7 +6,7 @@
   - Create a  full stack application using MEN development tools and enjoy!
 
 ## To play the game:
-- Click here(https://jlee8020.github.io/project-blackjack/) to play the game.
+- Click here(https://foodloverz.herokuapp.com/restaurants) to see my project.
 
 ## Motivation:
 - Austin food scene has transformed into a mecca of experience and exploration especially for food lovers. From one humble heart of a food truck operator to an experienced or well known executive chefs who brings love, flavor and experiences to their dishes. There's no wonder why like many others, I have a long list of restaurants to visit around town! So, creating an app that list all these amazing places to showcase our very own Austin is a no brainer.
@@ -24,7 +24,7 @@ By some twist of fate she saw and flagged down Sam Grey Horse for local advice. 
 
 
 - Here is an initial wire-frame of how the playing field will be set up:
-![Image of Initial Wire Frame]
+![Image of Initial Wire Frame](Screen Shot 2020-03-06 at 4.18.08 AM.png)
 
 - Here is what the playing field looks like, post styling:
 
@@ -42,15 +42,15 @@ HTML
 Git
 Google Fonts
 CSS Tricks
-
+NodeJS
+Express
 
 
 ## Pseudocode:
 ![Inital Plan]
-## User Experience:
-
 
 ## Minimum Viable Product:
+
 - As a user I should be able to login in to the site
 - As a uAs a User I should be able to GET a list of restaurants on page load
 - As a User I should be able to PUT restaurants to the database
@@ -58,6 +58,8 @@ CSS Tricks
 - As a User I should be able to UPDATE a restaurant
 - As a user I should be able to see a list of restaurants with their DETAILS
 - As a user I want to be able to POST my experiences to a restaurant record
+
+
 
 ## Stretch Goals:
 Mobile responsiveness
