@@ -5,7 +5,15 @@ const experienceSchema = new mongoose.Schema({
     rating: {
       type: String,
 
-    }
+    },
+    userId: {
+      type: mongoose.Schema.Types.ObjectId,
+      required: true,
+      ref: 'User'
+    },
+    username: { String,
+
+  }
   }, {
     timestamps: true
   });
@@ -18,8 +26,12 @@ const restaurantSchema = new mongoose.Schema({
     city: {type: String}, 
     state:{type: String}, 
     zip:  {type: Number},
-    experiences : [experienceSchema]
-  
+    experiences : [experienceSchema],
+    userRecommending: {
+      type: mongoose.Schema.Types.ObjectId,
+      required: true,
+      ref: 'User'
+    },
     
 },{
  timestamps: true

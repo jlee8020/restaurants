@@ -4,6 +4,10 @@ const router = require('express').Router();
 const passport = require('passport');
 
 /* GET home page. */
+//added
+router.get('/', function(req, res) {
+  res.redirect('/users');
+});
 
 
 router.get('/', function(req, res, next) {

@@ -3,8 +3,7 @@ var router = express.Router();
 var usersCtrl = require('../controllers/users');
 
 
-
-// GET /students
+//get users
 router.get('/users', usersCtrl.index);
 
 /* GET users listing. */
