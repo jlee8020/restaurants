@@ -51,16 +51,27 @@ CSS Tricks
 
 
 ## Minimum Viable Product:
-- As a user, I should be able to deal cards and play against dealer.
-- As a user, I should be able to total 21 and win Blackjack.
-- As a user, I should be able to beat the dealer when dealer if dealer cards total more than 21.
-- As a user, I should be able to get a busts if my cards total is more than 21.
-- As a user, I should be able to see if I win!
+- As a user I should be able to login in to the site
+- As a uAs a User I should be able to GET a list of restaurants on page load
+- As a User I should be able to PUT restaurants to the database
+- As a user I should be able to DELETE a restaurant from the database
+- As a User I should be able to UPDATE a restaurant
+- As a user I should be able to see a list of restaurants with their DETAILS
+- As a user I want to be able to POST my experiences to a restaurant record
 
 ## Stretch Goals:
 Mobile responsiveness
 More styling and theme
+As a user I should be able to SEARCH the database for restaurant
+Allow user to upload a photo of their dish and store in the restaurant collection
 
 
 ## Credits:
+Styling:
+Materialize: https://materializecss.com/
+LearnWebCode : https://youtu.be/k32voqQhODc
+File Upload: https://github.com/pqina/filepondttp://programmerblog.net/nodejs-file-upload-tutorial/
+layout/upload
+Tutorials:
+https://github.com/WebDevSimplified/Mybrary/tree/v1.3/views/layouts
 
