@@ -28,7 +28,8 @@ By some twist of fate she saw and flagged down Sam Grey Horse for local advice. 
 
 - Here is what the playing field looks like, post styling:
 
-![dealer win blackjack]
+- Trello
+![Trello](https://trello.com/b/jxeRKnbq/project-2)
 
 ![player blackjack]
 
