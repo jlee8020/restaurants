@@ -27,9 +27,9 @@ By some twist of fate she saw and flagged down Sam Grey Horse for local advice. 
 
 
 - Here is what the playing field looks like, post styling:
-![index](https://imgur.com/FKooUeM)
-![no experiences](https://imgur.com/ujzXhrD)
-![experiences](https://imgur.com/M1HwVsl)
+![index](https://github.com/jlee8020/restaurants/blob/master/Screen%20Shot%202020-03-08%20at%2011.13.21%20PM.png)
+![no experiences](https://github.com/jlee8020/restaurants/blob/master/Screen%20Shot%202020-03-08%20at%2011.14.00%20PM.png)
+![experiences](https://github.com/jlee8020/restaurants/blob/master/Screen%20Shot%202020-03-08%20at%2011.14.20%20PM.png)
 
 
 - Trello
