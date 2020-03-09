@@ -27,10 +27,10 @@ By some twist of fate she saw and flagged down Sam Grey Horse for local advice. 
 
 
 - Here is what the playing field looks like, post styling:
-![index](https://github.com/jlee8020/restaurants/blob/master/Screen%20Shot%202020-03-08%20at%2011.13.21%20PM.png)
-![no experiences](https://github.com/jlee8020/restaurants/blob/master/Screen%20Shot%202020-03-08%20at%2011.14.00%20PM.png)
+![index](https://github.com/jlee8020/restaurants/blob/master/Screen%20Shot%202020-03-08%20at%2011.13.21%20PM.png)<br/>
+![no experiences](https://github.com/jlee8020/restaurants/blob/master/Screen%20Shot%202020-03-08%20at%2011.14.00%20PM.png)<br/>
 ![experiences](https://github.com/jlee8020/restaurants/blob/master/Screen%20Shot%202020-03-08%20at%2011.14.20%20PM.png)
-
+<br/>
 
 - Trello
 https://trello.com/b/jxeRKnbq/project-2
