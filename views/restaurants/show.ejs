@@ -68,7 +68,7 @@
                 <td><%= experience.rating %></td>
                 <% if (experience.userId.equals(user._id)) { %>
                 <form action="/experiences/<%=experience._id %>/<%=restaurant._id %>?_method=DELETE" method="POST">
-                  <td><button id="delete" type="submit" class="btn btn-warning" <% if (!user) { %> hidden <% } else if (user._id.equals(r.user) == false ) { %> hidden <% } %>>x</button></td>
+                  <td><button id="delete" type="submit" class="btn btn-warning">x</button></td>
                 </form>
                 </tr>
             <% }}); %>

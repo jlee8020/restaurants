@@ -5,7 +5,7 @@
 ## Objective:
   - Create a  full stack application using MEN development tools and enjoy!
 
-## To play the game:
+## To create your list:
 - Click here(https://foodloverz.herokuapp.com/restaurants) to see my project.
 
 ## Motivation:
@@ -21,7 +21,7 @@ By some twist of fate she saw and flagged down Sam Grey Horse for local advice. 
 
 ## Prototype View:
 - Here is my initial drawing of the playing field:
-
+![Initial](https://github.com/jlee8020/restaurants/blob/master/Screen%20Shot%202020-03-06%20at%204.18.08%20AM.png)
 
 - Here is an initial wire-frame of how the playing field will be set up:
 ![Image of Initial Wire Frame](Screen Shot 2020-03-06 at 4.18.08 AM.png)
