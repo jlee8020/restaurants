@@ -20,10 +20,8 @@ By some twist of fate she saw and flagged down Sam Grey Horse for local advice. 
 
 
 ## Prototype View:
-- Here is my initial drawing of the playing field:
+- Here is my ERD of the program:
 ![Initial](https://github.com/jlee8020/restaurants/blob/master/Screen%20Shot%202020-03-06%20at%204.18.08%20AM.png)
-
-- Here is an initial wire-frame of how the playing field will be set up:
 
 
 - Here is what the playing field looks like, post styling:
