@@ -28,8 +28,8 @@ router.put('/:id', isLoggedIn, restaurantsCtrl.update)
 
 //Delete a restaurant (restrict to user who submitted the restaurant)
 
-router.get('/update/:id', restaurantsCtrl.showUpdate);
-router.put('/update/:id', restaurantsCtrl.update);
+router.get('/update/:id', isLoggedIn, restaurantsCtrl.showUpdate);
+router.put('/update/:id', isLoggedIn, restaurantsCtrl.update);
 router.delete('/:id',isLoggedIn, restaurantsCtrl.delete);
 router.put('/:id', isLoggedIn, restaurantsCtrl.update)
 

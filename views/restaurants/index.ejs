@@ -10,7 +10,6 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 </head>   
 <body>
-restaurant index
         <div class = "container">
           <div class="logo">
             <a href="https://imgur.com/9X8gYfC"><img src="https://i.imgur.com/9X8gYfCl.jpg" title="source: imgur.com" /></a>
@@ -54,7 +53,7 @@ restaurant index
               <td><%= r.street%></td>
               <td><a href="/restaurants/<%=r._id %>">Details Here</a></td>
               <form action="/restaurants/<%=r._id %>?_method=DELETE" method="POST">
-              <td><button id="delete" type="submit" class="btn btn-warning">x</button></td>
+              <td><button id="delete" type="submit" class="btn btn-warning" <% if (!user) { %> hidden <% } else if (user._id.equals(r.user) == false ) { %> hidden <% } %>>x</button></td>
               </form>
           </tr>
           <% }); %>

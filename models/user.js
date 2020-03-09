@@ -7,7 +7,7 @@ var userSchema = new mongoose.Schema({
     city: String,
     avatar: String,
     googleId: String,
-    //student fact Schema facts:[(factSchema)]
+    favorites: [{type: mongoose.Schema.Types.ObjectId, ref: "Restaurant"}]
 }, {
     timestamps: true
 });

@@ -30,17 +30,17 @@
       </div>
       </div>
       <div class="row center">
-        <h5 class="header col s12 light">Oh for the Love of Food!</h5>
+        <h3 class="header col s12 light">Oh for the Love of Food!</h3>
       </div>
       <div class="row center">
         <form action="/restaurants/update/<%= restaurant._id %>?_method=PUT">
-          <button type="submit" class="btn btn-warning" value="Edit Details">Edit</button>
+          <button type="submit" class="btn btn-warning" value="Edit Details" >Edit</button>
       </div>
     </form>
-      <br><br><h2>Experiences</h2>
+      <br><br><h3>Experiences</h3>
       <form id="add-experience" method="POST"
         action="/restaurants/<%= restaurant._id %>/experiences">
-        <label>Experience:</label>
+        <label>What was your Experience like?:</label><br>
         <input name="content" type="text" placeholder="#startwithahashtag!" required pattern="(#\S+\b)"></input>
         <label>Rating:</label>
         <select name="rating">
@@ -68,7 +68,7 @@
                 <td><%= experience.rating %></td>
                 <% if (experience.userId.equals(user._id)) { %>
                 <form action="/experiences/<%=experience._id %>/<%=restaurant._id %>?_method=DELETE" method="POST">
-                  <td><button id="delete" type="submit" class="btn btn-warning">x</button></td>
+                  <td><button id="delete" type="submit" class="btn btn-warning" <% if (!user) { %> hidden <% } else if (user._id.equals(r.user) == false ) { %> hidden <% } %>>x</button></td>
                 </form>
                 </tr>
             <% }}); %>

@@ -11,9 +11,14 @@ router.post('/restaurants/:id/experiences', experiencesCtrl.create);
 
 //Handle the edit experience form being submitted 
 //(restrict to user who submitted the experience)
-router.put('/:id', experiencesCtrl.update)
+router.put('/:id', isLoggedIn, experiencesCtrl.update)
 
 //Delete an experience (restrict to user who submitted the experience)
-router.delete('/:id/:restaurantid', experiencesCtrl.delete);
+router.delete('/:id/:restaurantid', isLoggedIn, experiencesCtrl.delete);
+
+function isLoggedIn(req, res, next) {
+    if (req.isAuthenticated()) return next();
+    res.redirect("/auth/google");
+}
 
 module.exports = router;
