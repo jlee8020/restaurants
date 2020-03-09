@@ -30,14 +30,12 @@ function newRestaurant(req, res) {
 //creating new restaurant
   function create(req, res) {
     var restaurant = new Restaurant(req.body);
-    console.log(req.body);
     //added to assign the logged in user's id
     restaurant.user = req.user._id;
     restaurant.save(function(err) {
         if (err) {
             console.log(err)
             return res.render('restaurants/new');}
-
             else{
 
             

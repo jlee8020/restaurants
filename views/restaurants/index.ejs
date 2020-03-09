@@ -49,8 +49,8 @@ restaurant index
           <% restaurants.forEach(function(r){ %>
             <tr>
               <td><%= r.name %></td>
-              <td><%= r.cuisine %></td>
               <td><%= r.category %></td> 
+              <td><%= r.cuisine %></td>
               <td><%= r.street%></td>
               <td><a href="/restaurants/<%=r._id %>">Details Here</a></td>
               <form action="/restaurants/<%=r._id %>?_method=DELETE" method="POST">
