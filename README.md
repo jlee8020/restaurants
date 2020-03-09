@@ -24,16 +24,19 @@ By some twist of fate she saw and flagged down Sam Grey Horse for local advice. 
 ![Initial](https://github.com/jlee8020/restaurants/blob/master/Screen%20Shot%202020-03-06%20at%204.18.08%20AM.png)
 
 - Here is an initial wire-frame of how the playing field will be set up:
-![Image of Initial Wire Frame](Screen Shot 2020-03-06 at 4.18.08 AM.png)
+
 
 - Here is what the playing field looks like, post styling:
+![index](https://imgur.com/FKooUeM)
+![no experiences](https://imgur.com/ujzXhrD)
+![experiences](https://imgur.com/M1HwVsl)
+
 
 - Trello
 https://trello.com/b/jxeRKnbq/project-2
 
 ![Trello](https://trello.com/b/jxeRKnbq/project-2)
 
-![player blackjack]
 
 ![dealer win]
 
